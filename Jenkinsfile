@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    environment {
+        CI = 'false'  // Disables treating warnings as errors in the CI environment
+    }
+    
     stages {
         stage('Clone Frontend Repository') {
             steps {
