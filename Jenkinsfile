@@ -15,13 +15,6 @@ pipeline {
                 sh 'npm run build'
             }
         }
-
-        stage('Deploy Frontend') {
-            steps {
-                // Deploy frontend (e.g., Docker or server script)
-                sh 'docker build -t reactjs-app .'
-                sh 'docker run -d -p 3000:3000 reactjs-app'
-            }
         }
     }
 
